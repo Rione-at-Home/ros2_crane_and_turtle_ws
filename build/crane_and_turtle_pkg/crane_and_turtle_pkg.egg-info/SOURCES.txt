@@ -9,6 +9,8 @@ setup.py
 ../../build/crane_and_turtle_pkg/crane_and_turtle_pkg.egg-info/top_level.txt
 ../../build/crane_and_turtle_pkg/crane_and_turtle_pkg.egg-info/zip-safe
 crane_and_turtle_pkg/__init__.py
+crane_and_turtle_pkg/crane_driver_node.py
+crane_and_turtle_pkg/gui.py
 resource/crane_and_turtle_pkg
 test/test_copyright.py
 test/test_flake8.py
