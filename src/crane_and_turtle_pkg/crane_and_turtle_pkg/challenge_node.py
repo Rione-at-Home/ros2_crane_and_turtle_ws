@@ -51,13 +51,15 @@ class ChallengeNode(Node):
         # Example program
         #
 
+        self.get_logger().info("Running challenge!")
+
         self.robot.base.forward(1.0)
 
-        self.robot.base.wait(1.0)
+        self.get_logger().info("Finished forward.")
 
         self.robot.base.backward(1.0)
 
-        self.get_logger().info("Challenge complete!")
+        self.get_logger().info("Finished backward.")
 
 
 def main(args=None):
