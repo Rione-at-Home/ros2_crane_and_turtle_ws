@@ -24,8 +24,8 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'driver_node = crane_plus_driver.crane_driver_node:main',
-            'gui_node = crane_plus_driver.gui:main',
+            'driver_node = crane_and_turtle_pkg.crane_driver_node:main',
+            'gui_node = crane_and_turtle_pkg.gui:main',
             'challenge_node = crane_and_turtle_pkg.challenge_node:main',
             
         ],
