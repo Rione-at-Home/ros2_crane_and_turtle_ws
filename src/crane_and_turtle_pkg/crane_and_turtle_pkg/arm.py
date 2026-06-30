@@ -1,3 +1,13 @@
+#
+## arm.py
+#
+#  This program defines the high-level interface for controlling the Crane+ arm. 
+#  It provides methods for moving the arm to predefined poses, as well as for 
+#  executing specific tasks such as picking up a can or placing it in a 
+#  designated location.
+#
+#
+
 #!/usr/bin/env python3
 
 import math
@@ -59,10 +69,6 @@ class ArmController:
 
         self.move(pose_deg)
         time.sleep(wait_time)
-
-    ###################################################
-    # High-level commands
-    ###################################################
 
     def home(self):
 
