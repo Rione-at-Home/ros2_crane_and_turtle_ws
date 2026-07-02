@@ -55,14 +55,13 @@ class ChallengeNode(Node):
 
         self.robot.arm.home()
 
-        self.robot.base.forward(5.0)
-        self.robot.base.forward(5.0)
+        self.robot.base.forward(1.62)
         self.get_logger().info("Finished forward.")
         self.robot.arm.pick_can()
         self.get_logger().info("Pick position.")
         self.robot.arm.lift()
         self.get_logger().info("Lifting.")
-        self.robot.base.backward(5.0)
+        self.robot.base.backward(1.62)
 
         self.get_logger().info("Finished backward.")
 

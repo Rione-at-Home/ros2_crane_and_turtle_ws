@@ -37,8 +37,9 @@ class BaseController:
     ###################################################
 
     def stop(self):
-
-        self.cmd_pub.publish(Twist())
+        for _ in range(10):
+            self.cmd_pub.publish(Twist())
+            time.sleep(0.05)
 
     def drive(self, linear=0.0, angular=0.0):
 
@@ -49,28 +50,27 @@ class BaseController:
 
         self.cmd_pub.publish(msg)
 
+    def driveTime(self, seconds, linear=0.0,angular=0.0):
+        start_time = time.time()
+        while time.time() - start_time < seconds:
+            self.drive(linear, angular)
+            time.sleep(0.1)
+        self.stop()
+
+
+    # Marvel was here.
 
     def forward(self, distance):
 
-        scale = 1.5
-        duration = (distance / self.linear_speed) *scale
+        duration = (distance / self.linear_speed)
 
-        self.drive(linear=self.linear_speed)
-
-        time.sleep(3)
-
-        self.stop()
+        self.driveTime(seconds=duration, linear=self.linear_speed)
 
     def backward(self, distance):
 
-        scale = 1.5
-        duration = (distance / self.linear_speed) * scale
+        duration = (distance / self.linear_speed)
 
-        self.drive(linear=-self.linear_speed)
-
-        time.sleep(3)
-
-        self.stop()
+        self.driveTime(seconds=duration,linear=-self.linear_speed)
 
     def left(self, angle_deg):
 
