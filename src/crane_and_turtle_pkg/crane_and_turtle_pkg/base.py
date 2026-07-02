@@ -29,7 +29,7 @@ class BaseController:
         #
         # Default speeds
         #
-        self.linear_speed = 0.20      # m/s
+        self.linear_speed = 0.5      # m/s
         self.angular_speed = 0.70     # rad/s
 
     ###################################################
@@ -52,21 +52,23 @@ class BaseController:
 
     def forward(self, distance):
 
-        duration = distance / self.linear_speed
+        scale = 1.5
+        duration = (distance / self.linear_speed) *scale
 
         self.drive(linear=self.linear_speed)
 
-        time.sleep(duration)
+        time.sleep(3)
 
         self.stop()
 
     def backward(self, distance):
 
-        duration = distance / self.linear_speed
+        scale = 1.5
+        duration = (distance / self.linear_speed) * scale
 
         self.drive(linear=-self.linear_speed)
 
-        time.sleep(duration)
+        time.sleep(3)
 
         self.stop()
 
