@@ -1,8 +1,13 @@
+<div align="center">
+
 # TurtleBot2.5 Robotics Challenge Framework
 
-<p align="right">
-  <a href="./README.md">🇺🇸 English</a>
-</p>
+[![English](https://img.shields.io/badge/Language-English-blue)](README.md)
+[![日本語](https://img.shields.io/badge/言語-日本語-red)](README_JP.md)
+
+TurtleBot2.5 ROS 2 自律ロボティクスチャレンジ用フレームワーク
+
+</div>
 
 このリポジトリは、**TurtleBot2.5 Robotics Challenge** 用に作成されたROS 2ソフトウェアフレームワークです。
 
@@ -70,9 +75,25 @@ source install/setup.bash
 
 # 実行方法
 
-最初に各ハードウェアドライバを起動します。
+必要なハードウェアドライバを起動します。
 
-その後、チャレンジプログラムを実行します。
+1つ目のターミナルで、Kobukiの起動ファイルを親行します：
+```bash
+ros2 run kobuki_node kobuki_ros_node --ros-args -p device_port:=/dev/ttyUSB0
+```
+
+または
+
+```bash
+ros2 launch kobuki_node kobuki_node-launch.py device:=/dev/kobuki
+```
+
+2つ目のターミナルで、Crane Plusアームのドライバを起動します：
+```bash
+ros2 run crane_and_turtle_pkg driver_node
+```
+
+その後、チャレンジプログラムを実行します：
 
 ```bash
 ros2 run crane_and_turtle_pkg challenge_node
