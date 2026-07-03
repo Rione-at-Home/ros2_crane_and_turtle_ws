@@ -76,6 +76,24 @@ source install/setup.bash
 
 Start the required hardware drivers.
 
+In one terminal, run the Kobuki launch file: 
+```bash
+ros2 run \kobuki_node kobuki_ros_node --ros-args -p device_port:=/dev/ttyUSB0
+```
+
+or
+
+```bash
+ros2 launch kobuki_node kobuki_node-launch.py device:=/dev/kobuki
+```
+
+In another terminal, run the driver for the Crane Plus arm: 
+```bash
+ros2 run crane_and_turtle_pkg driver_node
+```
+
+
+
 Then run the challenge program:
 
 ```bash
