@@ -78,7 +78,7 @@ Start the required hardware drivers.
 
 In one terminal, run the Kobuki launch file: 
 ```bash
-ros2 run \kobuki_node kobuki_ros_node --ros-args -p device_port:=/dev/ttyUSB0
+ros2 run kobuki_node kobuki_ros_node --ros-args -p device_port:=/dev/ttyUSB0
 ```
 
 or
