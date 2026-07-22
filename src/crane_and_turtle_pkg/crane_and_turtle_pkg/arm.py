@@ -76,8 +76,8 @@ class ArmController:
 
     def pick_can(self):
 
-        self.move_and_wait(poses.PRE_PICK)
-        self.move_and_wait(poses.APPROACH)
+        # self.move_and_wait(poses.PRE_PICK)
+        # self.move_and_wait(poses.APPROACH)
         self.move_and_wait(poses.GRAB)
 
     def lift(self):

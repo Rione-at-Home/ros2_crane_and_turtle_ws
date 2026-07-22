@@ -16,11 +16,7 @@ crane_and_turtle_pkg/crane_driver_node.py
 crane_and_turtle_pkg/gui.py
 crane_and_turtle_pkg/poses.py
 crane_and_turtle_pkg/robot.py
-crane_and_turtle_pkg.egg-info/PKG-INFO
-crane_and_turtle_pkg.egg-info/SOURCES.txt
-crane_and_turtle_pkg.egg-info/dependency_links.txt
-crane_and_turtle_pkg.egg-info/entry_points.txt
-crane_and_turtle_pkg.egg-info/requires.txt
-crane_and_turtle_pkg.egg-info/top_level.txt
-crane_and_turtle_pkg.egg-info/zip-safe
 resource/crane_and_turtle_pkg
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py

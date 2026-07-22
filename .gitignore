@@ -1,3 +1,5 @@
 build/
 install/
 log/
+src/crane_and_turtle_pkg/crane_and_turtle_pkg/__pycache__
+src/crane_and_turtle_pkg/crane_and_turtle_pkg/__init__.py
