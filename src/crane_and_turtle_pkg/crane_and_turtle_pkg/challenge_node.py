@@ -10,6 +10,7 @@
 
 import rclpy
 from rclpy.node import Node
+import time
 
 from .robot import Robot
 
@@ -46,26 +47,26 @@ class ChallengeNode(Node):
             self.robot.arm.place_right()
             self.robot.arm.catapult()
         """
-
+        
+        
         #
         # Example program
         #
 
-        self.get_logger().info("Running example!")
+        #self.get_logger().info("Running example!")
 
-        self.robot.arm.home()
+        self.robot.arm.custom1()
+        self.robot.base.forward(0.70)
+        self.robot.arm.customgrab()
+        self.robot.base.forward(0.40)
+        for i in range(1, 57):
+            self.robot.base.right(10)
+        self.robot.base.forward(0.20)
+        self.robot.arm.custom1()
 
-        self.robot.base.forward(1.62)
-        self.get_logger().info("Finished forward.")
-        self.robot.arm.pick_can()
-        self.get_logger().info("Pick position.")
-        self.robot.arm.lift()
-        self.get_logger().info("Lifting.")
-        self.robot.base.backward(1.62)
+       
 
-        self.get_logger().info("Finished backward.")
 
-        self.get_logger().info("Finished example!")
 
 
 def main(args=None):

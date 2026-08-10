@@ -28,13 +28,13 @@ class ArmController:
         self.joint_pub = node.create_publisher(
             JointState,
             "/crane_plus_command",
-            10
+            5
         )
 
         self.speed_pub = node.create_publisher(
             Int32,
             "/crane_plus_speed",
-            10
+            5
         )
 
         self.joint_names = [
@@ -99,3 +99,15 @@ class ArmController:
         self.move_and_wait(poses.THROW_READY)
         self.move_and_wait(poses.THROW, 0.15)
         self.move_and_wait(poses.THROW_RELEASE, 0.5)
+
+    def close(self):
+
+        self.move_and_wait(poses.GRAB2)
+    
+    def custom1(self):
+        self.move_and_wait(poses.CUSTOM1)
+
+    def customgrab(self):
+        self.move_and_wait(poses.CUSTOMGRAB)
+
+    

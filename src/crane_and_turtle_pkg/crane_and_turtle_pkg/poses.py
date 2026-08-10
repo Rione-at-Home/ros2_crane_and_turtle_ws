@@ -16,7 +16,30 @@ HOME = [
     0,
     0,
     0,
-    0,
+    0,        # self.robot.base.right(45)
+        # self.robot.base.right(45)
+        # self.robot.base.right(45)
+        # self.robot.base.right(45)
+        # self.robot.base.right(45)
+        # self.robot.base.right(45)
+        # self.robot.base.right(45)
+        # self.robot.base.right(45)
+
+        # self.robot.arm.pick_can()
+        # self.robot.arm.lift()
+
+        # self.robot.base.left(45)
+        # self.robot.base.left(45)
+        # self.robot.base.left(45)
+        # self.robot.base.left(45)
+        # self.robot.base.left(45)
+        # self.robot.base.left(45)
+        # self.robot.base.left(45)
+        # self.robot.base.left(45)
+
+        
+        # self.robot.arm.catapult()
+
 ]
 
 PRE_PICK = [
@@ -36,19 +59,38 @@ APPROACH = [
 ]
 
 GRAB = [
+    #0,
+    #100,
+    #-43,
+    #45,
+    #-35,
+    0,
+    100,
+    -60,
+    50,
+    -10
+
+]
+
+GRAB2 = [
     0,
     97,
     -60,
     70,
-    -35,
+    35,
 ]
 
 LIFT = [
+    #0,
+    #10,
+    #-45,
+    #20,
+    #35,
     0,
-    10,
-    -45,
-    20,
-    -35,
+    -10,
+    -60,
+    50,
+    -10
 ]
 
 LEFT_PLACE = [
@@ -56,7 +98,7 @@ LEFT_PLACE = [
     95,
     -40,
     50,
-    -35,
+    35,
 ]
 
 RIGHT_PLACE = [
@@ -106,3 +148,20 @@ THROW_RELEASE = [
     -20,
     -60,
 ]
+
+CUSTOM1 = [
+    0,
+    134,
+    -53,
+    54,
+    -58
+]
+
+CUSTOMGRAB = [
+    0,
+    134,
+    -53,
+    54,
+    135
+]
+

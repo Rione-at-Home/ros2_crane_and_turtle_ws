@@ -1,0 +1,29 @@
+        # Example
+        #
+
+        # self.get_logger().info("Starting Trash Sorting")
+        
+        # 1. Start from a safe position
+        # self.robot.arm.home()
+
+        # 2. Drive to the trash location
+        # self.robot.base.forward(1.5)
+        # self.get_logger().info("Reached the trash location.")
+
+        # 3. Pick it up and lift it safely
+        # self.robot.arm.pick_can()
+        # self.robot.arm.lift()
+        # self.get_logger().info("Trash collected.")
+
+        # 4. Drive back to the starting point
+        # self.robot.base.backward(1.5)
+
+        # 5. Turn left towards the bin (e.g., 90 degrees)
+        # self.robot.base.left(90)
+
+        # 6. Drive to the bin (e.g., 1.0 meter away)
+        # self.robot.base.forward(1.0)
+        
+        # 7. Place the waste on the right side into the bin
+        # self.robot.arm.place_right()
+        # self.get_logger().info("Trash sorting complete!")

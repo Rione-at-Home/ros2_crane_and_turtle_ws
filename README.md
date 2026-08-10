@@ -98,6 +98,7 @@ Then run the challenge program:
 
 ```bash
 ros2 run crane_and_turtle_pkg challenge_node
+ros2 run crane_and_turtle_pkg challenge_node
 ```
 
 ---

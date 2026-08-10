@@ -11,7 +11,7 @@ from dynamixel_sdk import PacketHandler
 from std_msgs import msg
 from std_msgs.msg import Int32
 
-ADDR_MOVING_SPEED = 32 
+ADDR_MOVING_SPEED = 15
 
 
 PROTOCOL_VERSION = 1.0
@@ -70,7 +70,7 @@ class CranePlusDriver(Node):
             Int32,
             "/crane_plus_speed",
             self.speed_callback,
-            10
+            5
         )
 
     def command_callback(self, msg):
